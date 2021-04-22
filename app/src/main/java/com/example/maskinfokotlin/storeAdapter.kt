@@ -11,20 +11,12 @@ import java.util.*
 
 // 아이템 뷰 정보를 가지고 있는 클래스
 class StoreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    var nameTextView: TextView
-    var addressTextView: TextView
-    var distanceTextView: TextView
-    var remainTextView: TextView
-    var countTextView: TextView
+    var nameTextView: TextView = itemView.findViewById(R.id.name_text_view)
+    var addressTextView: TextView = itemView.findViewById(R.id.addr_text_view)
+    var distanceTextView: TextView = itemView.findViewById(R.id.distance_text_view)
+    var remainTextView: TextView = itemView.findViewById(R.id.remain_text_view)
+    var countTextView: TextView = itemView.findViewById(R.id.count_text_view)
 
-    // init -> 생성자 이후 바로 호출됨
-    init {
-        nameTextView = itemView.findViewById(R.id.name_text_view)
-        addressTextView = itemView.findViewById(R.id.addr_text_view)
-        distanceTextView = itemView.findViewById(R.id.distance_text_view)
-        remainTextView = itemView.findViewById(R.id.remain_text_view)
-        countTextView = itemView.findViewById(R.id.count_text_view)
-    }
 }
 
 class StoreAdapter : RecyclerView.Adapter<StoreViewHolder>() {
